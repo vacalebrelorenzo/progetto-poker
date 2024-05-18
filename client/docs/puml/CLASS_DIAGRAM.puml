@@ -1,0 +1,109 @@
+@startuml CLASS_DIAGRAM_CLIENT
+
+title CLASS_DIAGRAM_CLIENT
+
+class Carte {
+  - lista: List<Carta>
+
+  + Carte()
+  + addCarta(c: Carta): void
+  + svuotaCarte(): void
+  + size(): int
+}
+
+class Carta {
+  - numero: String
+  - seme: String
+  - isScoperta: boolean
+
+  + Carta(numero: String, seme: String, isScoperta: boolean)
+  + getNumero(): String
+  + setNumero(numero: String): void
+  + getSeme(): String
+  + setSeme(seme: String): void
+  + getIsScoperta(): boolean
+  + setScoperta(isScoperta: boolean): void
+}
+
+class Comunicazione {
+  - clientSocket: Socket
+  - input: BufferedReader
+  - output: PrintWriter
+
+  + Comunicazione() throws UnknownHostException, IOException
+  + input(): String throws IOException
+  + output(mess: String): void
+  + terminateConnection(): void throws IOException
+}
+
+class Gioco {
+  - game: GuiGame
+  - isYourTurn: boolean
+  - haiVinto: boolean
+
+  + Gioco(game: GuiGame)
+  + scommetti(): void throws IOException
+  + passa(): void throws IOException
+  - controlloVincita(): void throws IOException
+  + riceviTurno(): void throws IOException
+  + svuotaCarteTurno(): void
+}
+
+class GuiGame {
+  - immagineSfondo: BufferedImage
+  - pannelloSfondo: JPanel
+  - contenitore: GridBagConstraints
+  - menuTendina: JComboBox<String>
+  - imgGiocatore: BufferedImage
+  - imgDealer: BufferedImage
+  - imgcarta: BufferedImage
+  - isClose: boolean
+  - puntata: int
+  - isScommesso: boolean
+  - isPassato: boolean
+  - isAbbandonato: boolean
+  - isOver: boolean
+  - scommetti: JButton
+  - passa: JButton
+  - communication: Comunicazione
+  - play: Gioco
+  - carte: Carte
+  - flop: Carte
+
+  + GuiGame(communication: Comunicazione, carte: Carte, flop: Carte) throws IOException
+  - addComponent(daSu: int, daSinistra: int, daGiu: int, daDestra: int, component: JComponent): void
+  - creaPannelloConSfondo(): JPanel
+  - disegnaSfondo(g: Graphics): void
+  - actionRules(): void throws IOException, URISyntaxException
+  - exploreUrl(url: String): void throws IOException, URISyntaxException
+  - leftGame(): void throws IOException, URISyntaxException
+  - resizeImage(img: BufferedImage, larghezza: int, altezza: int): BufferedImage
+  + inserisciErrore(message: String, title: String): void
+  + inserisciMex(message: String, title: String): void
+  + mostraManoIniziale(): void throws IOException
+  + mostraFlopIniziale(): void throws IOException
+}
+
+class GuiStart {
+  - immagineSfondo: BufferedImage
+  - pannelloSfondo: JPanel
+  - contenitore: GridBagConstraints
+  - start: JButton
+  - imgCasino: BufferedImage
+  - communication: Comunicazione
+  - game: GuiGame
+
+  + GuiStart() throws IOException
+  - addComponent(daSu: int, daSinistra: int, daGiu: int, daDestra: int, component: JComponent): void
+  - creaPannelloConSfondo(): JPanel
+  - disegnaSfondo(g: Graphics): void
+  - resizeImage(img: BufferedImage, larghezza: int, altezza: int): BufferedImage
+}
+
+GuiStart --> GuiGame: game
+GuiGame --> Gioco: play
+Gioco --> Comunicazione: communication
+Gioco --> Carte: carte
+Gioco --> Carte: flop
+
+@enduml

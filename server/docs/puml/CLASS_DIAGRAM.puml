@@ -1,0 +1,169 @@
+@startuml CLASS_DIAGRAM_SERVER
+
+title CLASS DIAGRAM SERVER
+
+class Comunicazione {
+  - serverSocket: ServerSocket
+  - port: int
+  - numeroDiClientConnessi: int
+  - listaGiocatori: GestioneGiocatori
+  - gioco: Gioco
+  - turnoGiocatore: int
+
+  + Comunicazione(port: int)
+  + avviaServer(): void
+  + gestisciConnessioneSingoloClient(): void
+  + leggiRichiesteDeiClient(): void
+  + riceviRichiestaDalClient(clientSocket: Socket): void
+  + invioInformazioniAlClient(clientSocket: Socket, messaggio: String): void
+  + inviaflop(posTmp: int): void
+  + inviaInfoATutti(vincitore: Socket): void
+  + eseguiTurno(clientSocket: Socket, posClientCheEffettuaRichiesta: int): void
+}
+
+class GestioneGiocatori {
+  - listaGiocatori: List<Giocatore>
+
+  + GestioneGiocatori()
+  + aggiungiGiocatore(giocatore: Giocatore): boolean
+  + trovaPosizioneClient(tmpSocket: Socket): int
+  + ottieniGiocatore(socketClient: Socket): Giocatore
+  + controllaDuplicati(sClientTemp: Socket): boolean
+  + posizioneGiocatore(sClientTemp: Socket): int
+  + getGiocatore(posG: int): Giocatore
+  + size(): int
+  + pullGiocatore(client: Socket): void
+}
+
+class Gioco {
+  - listaGiocatori: GestioneGiocatori
+  - posGiocatoreEffRic: int
+  - funzioneRichiesta: String
+  - socketClientTmp: Socket
+  - comunicazioneTmp: Comunicazione
+  - mazzoDaGioco: Mazzo
+  - mazzoCarteScartate: Mazzo
+  - flopBanco: Mazzo
+  - statusGioco: boolean
+  - statusRound: boolean
+  - scommessaTotale: float
+
+  + Gioco(listaCompleta: GestioneGiocatori)
+  + setPosGiocatoreEffRic(nG: int): void
+  + setFunzioneRichiesta(fR: String): void
+  + setStatusTrue(): void
+  + setStatusFalse(): void
+  + setSocketClientTmp(tmp: Socket): void
+  + getStatus(): boolean
+  + getListaGiocatori(): GestioneGiocatori
+  + isStatusRound(): boolean
+  + setStatusRoundFalse(): void
+  + setStatusRoundTrue(): void
+  + distribuisciFlop(): void
+  + svuotaFlop(): void
+  + getFlopSize(): int
+  + getScommessaTot(): float
+  + creaMazzi(): void
+  + distribuisciCarta(): Carta
+  + trovaGiocatoreEInserisciCartaInMano(): void
+  + statoRound(): boolean
+  + svuotaMani(): void
+  + flopToString(): String
+  + aggiungiCartaFlop(): void
+  + showDown(): void
+  + ordinaMano(mC: ManoGiocatore, comb: String[]): void
+  + isSameSeme(mano: List<Carta>): boolean
+  + isConsecutive(mano: List<Carta>): boolean
+  + controlloScalaReale(mC: ManoGiocatore, comb: String[]): boolean
+  + controlloScalaColore(mC: ManoGiocatore, comb: String[]): boolean
+  + controlloPoker(mC: ManoGiocatore, comb: String[]): boolean
+  + controlloFull(mC: ManoGiocatore, comb: String[]): boolean
+  + controlloColore(mC: ManoGiocatore, comb: String[]): boolean
+  + controlloScala(mC: ManoGiocatore, comb: String[]): boolean
+  + controlloTris(mC: ManoGiocatore, comb: String[]): boolean
+  + controlloDoppiaCoppia(mC: ManoGiocatore, comb: String[]): boolean
+  + controlloCoppia(mC: ManoGiocatore, comb: String[]): boolean
+  + settaCombinazione(mC: ManoGiocatore, comb: String[]): int
+  + getPosTrovaCombinazioneMigliore(combinazioni: String[]): int
+  + trovaPosizioneCombinazione(combinazioni: String[], combinazione: String): int
+  + trovaVincitore(): Socket
+  + assegnazionePiatto(): Socket
+  + eseguiMano(): void
+}
+
+class Giocatore {
+  - socketDelGiocatore: Socket
+  - manoGiocatore: ManoGiocatore
+  - urTurn: boolean
+  - statusPresenza: boolean
+  - puntata: float
+
+  + getStatusPresenza(): boolean
+  + setStatusPresenza(statusPresenza: boolean): void
+  + Giocatore(socketClient: Socket)
+  + getUrTurn(): boolean
+  + getSocket(): Socket
+  + getManoGiocatore(): ManoGiocatore
+  + setUrTurn(stato: boolean): void
+  + addPuntata(p: float): void
+  + addPuntata2(p: String): void
+  + getPuntata(): float
+}
+
+class Carta {
+  - numero: String
+  - seme: String
+  - isFaceUp: boolean
+
+  + getNumero(): String
+  + getSeme(): String
+  + isFaceUp(): boolean
+  + scopriCarta(): void
+  + copriCarta(): void
+  + Carta(numero: String, seme: String)
+  + visCarta(): void
+  + getIsFacedUp(): boolean
+}
+
+class ManoGiocatore {
+  - manoGiocatore: List<Carta>
+  - combinazioneCarte: String
+
+  + getCombinazioneCarte(): String
+  + setCombinazioneCarte(combinazioneCarte: String): void
+  + ManoGiocatore()
+  + mano(): List<Carta>
+  + push(carta: Carta): void
+  + pull(carta: Carta): void
+  + size(): int
+  + get(p: int): Carta
+  + getLast(): Carta
+  + svuotaMano(carteScartate: Mazzo): void
+  + mettiInsiemeMano(flop: Mazzo): ManoGiocatore
+}
+
+class Mazzo {
+  - mazzo: List<Carta>
+
+  + Mazzo()
+  + svuota(mazzoScarti: Mazzo): void
+  + riempiMazzo(): void
+  + mischiaMazzo(): void
+  + push(carta: Carta): void
+  + pushMano(mano: ManoGiocatore): void
+  + riempiFlop(mazzoGioco: Mazzo): void
+  + pull(): Carta
+  + getSize(): int
+  + getCarta(pos: int): Carta
+  + flopToString(): String
+}
+
+Comunicazione --* GestioneGiocatori
+Comunicazione --* Gioco
+GestioneGiocatori --* Giocatore
+Gioco --* GestioneGiocatori
+Giocatore --* ManoGiocatore
+ManoGiocatore --* Carta
+Gioco --* Mazzo
+
+@enduml

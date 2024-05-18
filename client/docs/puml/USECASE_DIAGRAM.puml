@@ -1,0 +1,42 @@
+@startuml USECASE_DIAGRAM
+
+!define SOCKET class
+
+actor Player as P
+
+rectangle "Gioco Poker Lato Client" {
+  usecase "Fare una scommessa" as Bet
+  usecase "Passare" as Fold
+  usecase "Menu" as Menu
+  usecase "Abbandonare la partita" as Quit
+  usecase "Comunicare" as Communication
+  usecase "Consultare le regole" as Rules
+
+  P --> Bet
+  P --> Fold
+  P --> Menu
+
+  Menu --> Rules
+  Menu --> Communication
+  Menu --> Quit
+
+  [P] --> (Socket) : Invia/Ricevi Dati
+}
+
+rectangle "Server Poker" {
+  usecase "Gestione Partita" as ManageGame
+  usecase "Verifica Regole" as CheckRules
+  usecase "Comunicazione" as ServerCommunication
+  usecase "Conclusione Partita" as EndGame
+
+  [Socket] --> ManageGame
+  [Socket] --> CheckRules
+  [Socket] --> ServerCommunication
+  [Socket] --> EndGame
+}
+
+P --> ManageGame : Scommessa / Passa
+ManageGame --> EndGame : Controlla Mani / Determina Vincitore / Comunica Risultati
+
+@enduml
+

@@ -1,0 +1,28 @@
+@startuml Diagramma delle Sequenze client-server
+!define SERVER class
+
+skinparam sequenceArrowThickness 2
+
+actor Player as P
+participant Server as S
+
+P -> S : Fare una scommessa
+activate P
+S --> P : Conferma scommessa
+
+P -> S : Passare
+activate P
+S --> P : Conferma passaggio
+
+P -> S : Menu
+activate P
+S --> P : Opzioni disponibili nel menu
+
+P -> S : Consultare le regole
+activate P
+S --> P : Regole del gioco
+
+P -> S : Abbandonare la partita
+activate P
+S --> P : Conferma abbandono
+@enduml

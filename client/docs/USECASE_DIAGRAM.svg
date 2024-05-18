@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="485px" preserveAspectRatio="none" style="width:1223px;height:485px;background:#FFFFFF;" version="1.1" viewBox="0 0 1223 485" width="1223px" zoomAndPan="magnify"><defs/><g><!--MD5=[d7b2d31f1d56e323798ca270bcec4f79]
+cluster Gioco Poker Lato Client--><g id="cluster_Gioco Poker Lato Client"><rect fill="none" height="213.5" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;" width="592" x="625" y="147.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="165" x="838.5" y="164.0332">Gioco Poker Lato Client</text></g><!--MD5=[345726944e00ecd4cf23bb83dde3ae17]
+cluster Server Poker--><g id="cluster_Server Poker"><rect fill="none" height="208.5" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;" width="544" x="7" y="270.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="93" x="232.5" y="287.0332">Server Poker</text></g><g id="elem_Bet"><ellipse cx="1090.105" cy="203.721" fill="#F1F1F1" rx="89.105" ry="20.221" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="136" x="1022.105" y="207.4495">Fare una scommessa</text></g><g id="elem_Fold"><ellipse cx="689.861" cy="203.4809" fill="#F1F1F1" rx="48.361" ry="15.4809" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52" x="661.6681" y="207.8128">Passare</text></g><g id="elem_Menu"><ellipse cx="930.234" cy="203.4517" fill="#F1F1F1" rx="36.234" ry="15.4517" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="35" x="912.734" y="207.1802">Menu</text></g><g id="elem_Quit"><ellipse cx="941.0017" cy="324.0003" fill="#F1F1F1" rx="93.0017" ry="21.0003" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="145" x="868.5017" y="327.7289">Abbandonare la partita</text></g><g id="elem_Communication"><ellipse cx="1135.08" cy="324.1227" fill="#F1F1F1" rx="66.08" ry="15.6227" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="1094.08" y="328.6393">Comunicare</text></g><g id="elem_Rules"><ellipse cx="727.1926" cy="324.0385" fill="#F1F1F1" rx="85.6926" ry="19.5385" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="128" x="663.1926" y="327.767">Consultare le regole</text></g><g id="elem_Socket"><ellipse cx="815.8909" cy="203.4517" fill="#F1F1F1" rx="41.8909" ry="15.4517" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43" x="794.3454" y="207.1948">Socket</text></g><g id="elem_ManageGame"><ellipse cx="98.2256" cy="323.9451" fill="#F1F1F1" rx="75.2256" ry="17.4451" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="102" x="44.2256" y="328.4617">Gestione Partita</text></g><g id="elem_CheckRules"><ellipse cx="462.0109" cy="324.0022" fill="#F1F1F1" rx="73.0109" ry="17.0022" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="411.0109" y="328.5188">Verifica Regole</text></g><g id="elem_ServerCommunication"><ellipse cx="281.0109" cy="324.0022" fill="#F1F1F1" rx="73.0109" ry="17.0022" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="230.0109" y="328.5188">Comunicazione</text></g><g id="elem_EndGame"><ellipse cx="279.0873" cy="444.1175" fill="#F1F1F1" rx="83.5873" ry="19.1175" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123" x="217.5873" y="447.846">Conclusione Partita</text></g><!--MD5=[626ad08abde0879284d52f51a0eb42aa]
+entity P--><g id="elem_P"><ellipse cx="815" cy="14" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M815,22 L815,49 M802,30 L828,30 M815,49 L802,64 M815,49 L828,64 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="795" y="80.0332">Player</text></g><!--MD5=[d728a1fabc8194e7a2e320fadf77077c]
+link P to Bet--><g id="link_P_Bet"><path d="M835.16,56.41 C866.98,73.7 930.7,108.6 984,139.5 C1008.03,153.43 1034.94,169.43 1055.63,181.82 " fill="none" id="P-to-Bet" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1059.95,184.4,1054.2905,176.3396,1055.6625,181.8275,1050.1746,183.1995,1059.95,184.4" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[d5d5d8eeb6d4bb146c4aa0e8c4711ed0]
+link P to Fold--><g id="link_P_Fold"><path d="M794.92,70.72 C769.66,102.45 726.9,156.16 704.57,184.2 " fill="none" id="P-to-Fold" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="701.42,188.15,710.1536,183.5976,704.533,184.2373,703.8933,178.6167,701.42,188.15" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[3ca689c92d3422a02db8ae586372be35]
+link P to Menu--><g id="link_P_Menu"><path d="M835.32,54.98 C856.7,66.01 889.73,86.26 908,113.5 C922.02,134.4 927.12,163.44 928.96,182.59 " fill="none" id="P-to-Menu" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="929.4,187.71,932.6145,178.4005,928.9718,182.7284,924.6439,179.0856,929.4,187.71" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[1bb87e2119d13662241cc5e3670118a5]
+link Menu to Rules--><g id="link_Menu_Rules"><path d="M909.42,216.51 C874.6,236.84 803.74,278.21 761.31,302.97 " fill="none" id="Menu-to-Rules" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="756.79,305.61,766.5773,304.5101,761.1037,303.0818,762.5321,297.6082,756.79,305.61" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[69cee00ce6934da17160aa7bf168ea3a]
+link Menu to Communication--><g id="link_Menu_Communication"><path d="M955,214.76 C980.16,225.45 1019.75,243.31 1052,262.5 C1074.04,275.61 1097.51,293.09 1113.85,305.88 " fill="none" id="Menu-to-Communication" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1117.84,309.03,1113.2526,300.3148,1113.9149,305.9327,1108.2969,306.595,1117.84,309.03" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[05a7b7c85940ea156712a83be9ed7e82]
+link Menu to Quit--><g id="link_Menu_Quit"><path d="M931.35,219.03 C933.16,238.57 936.42,273.61 938.64,297.56 " fill="none" id="Menu-to-Quit" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="939.12,302.8,942.2791,293.4715,938.6622,297.821,934.3127,294.2041,939.12,302.8" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[a196a2636bccd11000b32fb966d9e90f]
+link P to Socket--><g id="link_P_Socket"><path d="M813.02,83.61 C812.6,93.35 812.21,103.81 812,113.5 C811.48,137.18 813.01,164.38 814.33,182.42 " fill="none" id="P-to-Socket" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="814.73,187.7,818.0503,178.4277,814.3585,182.7138,810.0724,179.022,814.73,187.7" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="90" x="813" y="127.9951">Invia/Ricevi Dati</text></g><!--MD5=[fd40047da26f9372e95cf62c80e31e6a]
+link Socket to ManageGame--><g id="link_Socket_ManageGame"><path d="M787.67,214.99 C777.78,218.25 766.52,221.5 756,223.5 C508.28,270.56 428.93,181.93 190,262.5 C163.95,271.28 138.13,289.29 120.51,303.39 " fill="none" id="Socket-to-ManageGame" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="116.21,306.88,125.7174,304.3091,120.0906,303.727,120.6727,298.1002,116.21,306.88" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[c1df24a1f00798502ceb0368f872a104]
+link Socket to CheckRules--><g id="link_Socket_CheckRules"><path d="M786.65,214.78 C776.97,217.91 766.11,221.13 756,223.5 C671.05,243.39 643.01,221.11 562,253.5 C532.25,265.4 502.68,287.56 483.5,303.67 " fill="none" id="Socket-to-CheckRules" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="479.33,307.21,488.7777,304.4279,483.1393,303.9713,483.5959,298.3329,479.33,307.21" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[f0ca28efccb9de6f59487233b6c67f8f]
+link Socket to ServerCommunication--><g id="link_Socket_ServerCommunication"><path d="M787.33,214.9 C777.51,218.11 766.38,221.35 756,223.5 C588.01,258.24 533.5,204.65 372,262.5 C346.15,271.76 320.44,289.89 302.98,303.9 " fill="none" id="Socket-to-ServerCommunication" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="298.72,307.36,308.2227,304.772,302.5949,304.2,303.1668,298.5722,298.72,307.36" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[e57c9931243963bd59fabc3cbd38dfe5]
+link Socket to EndGame--><g id="link_Socket_EndGame"><path d="M785.51,214.28 C776.06,217.28 765.61,220.56 756,223.5 C697.5,241.4 672.42,225.12 624,262.5 C569.55,304.54 600.64,355.97 544,395 C514.78,415.14 427.04,428.27 360.45,435.62 " fill="none" id="Socket-to-EndGame" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="355.29,436.19,364.672,439.1865,360.2603,435.6457,363.8011,431.234,355.29,436.19" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[e30a72a9aac5f4cf6be6c56c3ae69876]
+link P to ManageGame--><g id="link_P_ManageGame"><path d="M794.98,50.88 C744.98,64.46 610.76,101.71 501,139.5 C369.27,184.85 336.92,198.31 209,253.5 C200.42,257.2 198.15,257.92 190,262.5 C167.26,275.28 142.63,291.62 124.58,304.1 " fill="none" id="P-to-ManageGame" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="120.14,307.18,129.8182,305.3546,124.2535,304.3377,125.2705,298.773,120.14,307.18" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="122" x="502" y="208.9951">Scommessa / Passa</text></g><!--MD5=[56666ae5225be33ca03c621482a44acc]
+link ManageGame to EndGame--><g id="link_ManageGame_EndGame"><path d="M122.04,340.67 C154.66,361.94 212.95,399.94 248.58,423.17 " fill="none" id="ManageGame-to-EndGame" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="252.81,425.93,247.4549,417.6643,248.6214,423.1995,243.0861,424.3661,252.81,425.93" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="330" x="205" y="391.4951">Controlla Mani / Determina Vincitore / Comunica Risultati</text></g><!--MD5=[c748d3cca1a3072bbd9eca0cdc095ced]
+@startuml USECASE_DIAGRAM
+
+!define SOCKET class
+
+actor Player as P
+
+rectangle "Gioco Poker Lato Client" {
+  usecase "Fare una scommessa" as Bet
+  usecase "Passare" as Fold
+  usecase "Menu" as Menu
+  usecase "Abbandonare la partita" as Quit
+  usecase "Comunicare" as Communication
+  usecase "Consultare le regole" as Rules
+
+  P - -> Bet
+  P - -> Fold
+  P - -> Menu
+
+  Menu - -> Rules
+  Menu - -> Communication
+  Menu - -> Quit
+
+  [P] - -> (Socket) : Invia/Ricevi Dati
+}
+
+rectangle "Server Poker" {
+  usecase "Gestione Partita" as ManageGame
+  usecase "Verifica Regole" as CheckRules
+  usecase "Comunicazione" as ServerCommunication
+  usecase "Conclusione Partita" as EndGame
+
+  [Socket] - -> ManageGame
+  [Socket] - -> CheckRules
+  [Socket] - -> ServerCommunication
+  [Socket] - -> EndGame
+}
+
+P - -> ManageGame : Scommessa / Passa
+ManageGame - -> EndGame : Controlla Mani / Determina Vincitore / Comunica Risultati
+
+@enduml
+
+@startuml USECASE_DIAGRAM
+
+
+actor Player as P
+
+rectangle "Gioco Poker Lato Client" {
+  usecase "Fare una scommessa" as Bet
+  usecase "Passare" as Fold
+  usecase "Menu" as Menu
+  usecase "Abbandonare la partita" as Quit
+  usecase "Comunicare" as Communication
+  usecase "Consultare le regole" as Rules
+
+  P - -> Bet
+  P - -> Fold
+  P - -> Menu
+
+  Menu - -> Rules
+  Menu - -> Communication
+  Menu - -> Quit
+
+  [P] - -> (Socket) : Invia/Ricevi Dati
+}
+
+rectangle "Server Poker" {
+  usecase "Gestione Partita" as ManageGame
+  usecase "Verifica Regole" as CheckRules
+  usecase "Comunicazione" as ServerCommunication
+  usecase "Conclusione Partita" as EndGame
+
+  [Socket] - -> ManageGame
+  [Socket] - -> CheckRules
+  [Socket] - -> ServerCommunication
+  [Socket] - -> EndGame
+}
+
+P - -> ManageGame : Scommessa / Passa
+ManageGame - -> EndGame : Controlla Mani / Determina Vincitore / Comunica Risultati
+
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 19:01:30 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: it
+Country: IT
+--></g></svg>
